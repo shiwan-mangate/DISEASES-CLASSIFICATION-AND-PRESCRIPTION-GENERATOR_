@@ -67,12 +67,24 @@ Each disease has **200 sample records** used for training.
 
 ---
 
-## ⚙️ Feature Engineering & Preprocessing
+## 🛠️ Feature Engineering
 
-From the code provided:
-- **Symptom data** was **vectorized using `CountVectorizer()`** from scikit-learn.
-- The text features were extracted from a string of symptoms and converted to numerical feature vectors.
-- No missing value imputation or label encoding was required as data was preprocessed manually.
+To convert the textual symptom input into a machine-understandable format, the following feature engineering steps were performed:
+
+### 1. Text Vectorization with TF-IDF
+- **Method used:** `TfidfVectorizer` from `sklearn.feature_extraction.text`.
+- This technique converts the symptom sentences into numerical vectors based on **Term Frequency–Inverse Document Frequency**, which emphasizes rare and important terms while reducing the weight of commonly occurring ones.
+- It helps in capturing the significance of specific symptoms in the context of all the diseases.
+
+### 2. Stopword Removal (Implicit)
+- Common English words that do not contribute to distinguishing between symptoms were automatically filtered out by the `TfidfVectorizer`.
+
+### 3. Lowercasing and Tokenization
+- The input symptom strings were **converted to lowercase** to avoid case-sensitive mismatches.
+- `TfidfVectorizer` also handles **basic tokenization** (splitting text into words) internally.
+
+These processed vectors were then used as input features for training the classification model.
+
 
 ---
 
@@ -115,5 +127,5 @@ From the code provided:
 
 ---
 
-## 📁 Folder Structure
+
 
