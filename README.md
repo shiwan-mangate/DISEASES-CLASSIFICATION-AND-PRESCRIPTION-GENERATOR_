@@ -9,11 +9,8 @@ Deployed using **Streamlit** 👉 [Click here to use the app](https://diseases-c
 
 ## 🖼️ Preview of the App
 
-![Home Page](./screenshots/diseases_classification_app.png)  
-*Home Page UI*
-
-![Prediction Page](./screenshots/final_report_app.png)  
-*Prediction Report UI*
+![Home Page](diseases_classification_app.png)
+![Prediction Page](final_report_app.png)
 
 ---
 
